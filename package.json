@@ -1,0 +1,42 @@
+{
+  "name": "kites-typescript-starter",
+  "version": "1.0.0",
+  "description": "Kites TypeScript starter repository",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "ts-node app.ts",
+    "start:prod": "node dist/appp.js",
+    "build": "tsc -p tsconfig.build.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kitesjs/typescript-starter.git"
+  },
+  "keywords": [
+    "kitesjs",
+    "starter"
+  ],
+  "author": "vunb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kitesjs/typescript-starter/issues"
+  },
+  "homepage": "https://github.com/kitesjs/typescript-starter#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.16",
+    "@types/supertest": "^2.0.8",
+    "jest": "^24.8.0",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "@kites/common": "^1.1.1-beta.2",
+    "@kites/core": "^1.1.1-beta.2",
+    "@kites/express": "^1.1.1-beta.2",
+    "@kites/rest": "^1.1.1-beta.2",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.2"
+  }
+}
