@@ -13,4 +13,8 @@ export class TodoService {
   public begin(task: string) {
     return `Start: ${task}`;
   }
+
+  public trash(task: string) {
+    return `Move task "${task}" to trash!`;
+  }
 }
