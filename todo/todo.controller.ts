@@ -1,24 +1,28 @@
-import { Controller, Get, Put, RequestParam, Delete } from '@kites/rest';
+import { Controller, Get, Put, RequestParam, Delete, Post, RequestBody } from '@kites/rest';
 import { TodoService } from './todo.service';
-import { remove } from 'winston';
 
-@Controller('/todo', (req, res, next) => {
-  console.log(`New request: ${req.method} ${req.url}`);
-  next();
-})
+@Controller('/todo')
 export class TodoController {
 
   constructor(public svTodo: TodoService) { }
 
-  @Get('/') list() {
+  @Get('/')
+  list() {
     return this.svTodo.getAll();
   }
 
-  @Get('/:id') details(@RequestParam('id') task) {
+  @Get('/:id')
+  details(@RequestParam('id') task) {
     return this.svTodo.get(task);
   }
 
-  @Put('/:id') begin(@RequestParam('id') task) {
+  @Post('/')
+  create(@RequestBody() body) {
+    return this.svTodo.create(body);
+  }
+
+  @Put('/:id')
+  begin(@RequestParam('id') task) {
     return this.svTodo.begin(task);
   }
 
