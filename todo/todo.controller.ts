@@ -26,8 +26,13 @@ export class TodoController {
     return this.svTodo.begin(task);
   }
 
+  /**
+   * HTTP Delete with a route middleware
+   * @param task
+   */
   @Delete('/:id', (req, res, next) => {
-    console.log('Preparing delete ...');
+    const id = req.param('id');
+    console.log(`Preparing delete: task ${id}`);
     next();
   })
   remove(@RequestParam('id') task) {
