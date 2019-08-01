@@ -32,10 +32,10 @@
     "typescript": "^3.5.3"
   },
   "dependencies": {
-    "@kites/common": "^1.1.1-beta.2",
-    "@kites/core": "^1.1.1-beta.2",
-    "@kites/express": "^1.1.1-beta.2",
-    "@kites/rest": "^1.1.1-beta.2",
+    "@kites/common": "^1.1.1",
+    "@kites/core": "^1.1.1",
+    "@kites/express": "^1.1.1",
+    "@kites/rest": "^1.1.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.5.2"
   }
