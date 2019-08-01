@@ -16,8 +16,7 @@ async function bootstrap() {
     .use(Rest)
     .init();
 
-  // Let's browse http://localhost:3000/api/todo
-  app.logger.info('Server started!');
+  app.logger.info(`Server started! Let's browse http://localhost:3000/api/todo`);
 }
 
 bootstrap();
