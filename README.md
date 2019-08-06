@@ -2,6 +2,11 @@
 
 This is basic project starter repository.
 
+```bash
+# Clone project template using git
+$ git clone https://github.com/kitesjs/typescript-starter.git
+```
+
 # Installation
 
 ```bash
