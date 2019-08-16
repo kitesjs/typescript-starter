@@ -60,4 +60,9 @@ typings/
 # next.js build output
 .next
 
+# build
 dist
+
+# dev/prod configuration (env)
+dev.config.json
+prod.config.json
