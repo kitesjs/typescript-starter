@@ -28,8 +28,14 @@ export class TodoController {
   }
 
   @Put('/:id')
-  begin(@RequestParam('id') task) {
-    return this.svTodo.begin(task);
+  begin(
+    @RequestParam('id') task,
+    @RequestBody() body,
+  ) {
+    const user = body.user;
+    const msg = this.svTodo.begin(task);
+    this.kites.logger.info(`Update task ${task} from ${user}`);
+    return { msg, user };
   }
 
   /**
