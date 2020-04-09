@@ -12,8 +12,8 @@ async function bootstrap() {
         TodoService,
       ],
     })
-    .use(Express)
-    .use(Rest)
+    .use(Express())
+    .use(Rest())
     .init();
 
   app.logger.info(`Server started! Let's browse http://localhost:3000/api/todo`);

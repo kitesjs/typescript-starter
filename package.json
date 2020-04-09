@@ -2,7 +2,7 @@
   "name": "kites-typescript-starter",
   "version": "1.0.0",
   "description": "Kites TypeScript starter repository",
-  "main": "index.js",
+  "main": "app",
   "scripts": {
     "test": "jest",
     "start": "ts-node-dev --respawn --transpileOnly ./app.ts",
@@ -24,19 +24,15 @@
   },
   "homepage": "https://github.com/kitesjs/typescript-starter#readme",
   "devDependencies": {
-    "@types/jest": "^24.0.17",
-    "@types/supertest": "^2.0.8",
-    "jest": "^24.8.0",
-    "ts-node-dev": "^1.0.0-pre.40",
-    "tslint": "^5.18.0",
-    "typescript": "^3.5.3"
+    "ts-node-dev": "^1.0.0-pre.44",
+    "tslint": "^5.20.1",
+    "typescript": "^3.8.3"
   },
   "dependencies": {
-    "@kites/common": "^1.1.2",
-    "@kites/core": "^1.1.2",
-    "@kites/express": "^1.1.2",
-    "@kites/rest": "^1.1.2",
-    "reflect-metadata": "^0.1.13",
-    "rxjs": "^6.5.2"
+    "@kites/common": "^1.2.1",
+    "@kites/core": "^1.2.1",
+    "@kites/express": "^1.2.1",
+    "@kites/rest": "^1.2.1",
+    "reflect-metadata": "^0.1.13"
   }
 }
