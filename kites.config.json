@@ -1,0 +1,11 @@
+{
+  "discover": false,
+  "extensionsLocationCache": true,
+  "logger": {
+    "console": {
+      "transport": "console",
+      "level": "info"
+    }
+  },
+  "extensions": null
+}
