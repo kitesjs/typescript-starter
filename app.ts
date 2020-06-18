@@ -14,6 +14,7 @@ async function bootstrap() {
         TodoService,
       ],
     })
+    // Remove the use extensions manually if discover set to true.
     .use(Express())
     .use(Rest())
     .init();

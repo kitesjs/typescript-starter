@@ -3,7 +3,7 @@ import { TodoService } from './todo.service';
 import { Inject } from '@kites/common';
 import { KITES_INSTANCE, KitesInstance } from '@kites/core';
 
-@Controller('/todo')
+@Controller('todo')
 export class TodoController {
 
   constructor(
@@ -11,23 +11,23 @@ export class TodoController {
     private svTodo: TodoService,
   ) { }
 
-  @Get('/')
+  @Get()
   list() {
     this.kites.logger.info('Get all todo ...');
     return this.svTodo.getAll();
   }
 
-  @Get('/:id')
+  @Get(':id')
   details(@RequestParam('id') task) {
     return this.svTodo.get(task);
   }
 
-  @Post('/')
+  @Post()
   create(@RequestBody() body) {
     return this.svTodo.create(body);
   }
 
-  @Put('/:id')
+  @Put(':id')
   begin(
     @RequestParam('id') task,
     @RequestBody() body,
@@ -42,7 +42,7 @@ export class TodoController {
    * HTTP Delete with a route middleware
    * @param task
    */
-  @Delete('/:id', (req, res, next) => {
+  @Delete(':id', (req, res, next) => {
     const id = req.param('id');
     console.log(`Preparing delete: task ${id}`);
     next();
